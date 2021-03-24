@@ -5,6 +5,14 @@ const app = Vue.createApp({
       name: ''
     };
   },
+  computed: { 
+    fullname() {
+      if(this.name === ''){
+        return '';
+      }
+      return this.name + ' ' + 'Schwarzmuller'
+    }
+  },
   methods: {
     outputFullname() {
       if(this.name === ''){
